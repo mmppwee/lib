@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 21:28:12 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/09/30 16:52:55 by pwareepo         ###   ########.fr       */
+/*   Created: 2022/09/30 16:21:19 by pwareepo          #+#    #+#             */
+/*   Updated: 2022/09/30 16:44:58 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isdigit(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
 int	main()
 {
-	char	c = 'p';
+	char	c = 'j';
 
-	printf("%d", ft_isalpha(c));
+	printf("%d", ft_isdigit(c));
 }
