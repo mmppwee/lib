@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 16:21:19 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/10/08 19:42:11 by pwareepo         ###   ########.fr       */
+/*   Created: 2022/10/08 22:46:54 by pwareepo          #+#    #+#             */
+/*   Updated: 2022/10/08 23:44:27 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isdigit(int c)
+size_t	ft_strlen(const char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
 int	main()
-{
-	int c = 'j';
+{	
+	const char *str = "Hello";
+	
+	int i = ft_strlen(str);
 
-	printf("%d", ft_isdigit(c));
-}
+	printf("%d", i);
+}	

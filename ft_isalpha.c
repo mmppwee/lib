@@ -6,13 +6,13 @@
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 21:28:12 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/09/30 16:52:55 by pwareepo         ###   ########.fr       */
+/*   Updated: 2022/10/09 00:10:29 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
@@ -21,7 +21,7 @@ int	ft_isalpha(char c)
 
 int	main()
 {
-	char	c = 'p';
+	int c = 'p';
 
 	printf("%d", ft_isalpha(c));
 }

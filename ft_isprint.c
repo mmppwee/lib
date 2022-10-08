@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 16:21:19 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/10/08 19:42:11 by pwareepo         ###   ########.fr       */
+/*   Created: 2022/10/08 22:35:20 by pwareepo          #+#    #+#             */
+/*   Updated: 2022/10/08 22:45:59 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isdigit(int c)
+int	ft_isprint(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
 
 int	main()
 {
-	int c = 'j';
+	int c = 'd';
 
-	printf("%d", ft_isdigit(c));
+	printf("%d", ft_isprint(c));
 }
