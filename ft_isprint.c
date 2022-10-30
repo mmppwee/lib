@@ -6,11 +6,11 @@
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 22:35:20 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/10/08 22:45:59 by pwareepo         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:19:21 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -19,9 +19,9 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-int	main()
+/*int	main()
 {
 	int c = 'd';
 
 	printf("%d", ft_isprint(c));
-}
+}*/

@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwareepo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 22:46:54 by pwareepo          #+#    #+#             */
-/*   Updated: 2022/10/30 16:45:23 by pwareepo         ###   ########.fr       */
+/*   Created: 2022/10/30 18:57:07 by pwareepo          #+#    #+#             */
+/*   Updated: 2022/10/30 19:07:09 by pwareepo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-/*int	main()
-{	
-	const char *str = "Hello";
-	
-	int i = ft_strlen(str);
-
-	printf("%d", i);
-}*/	
+		
