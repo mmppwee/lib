@@ -10,5 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memset(void *b, int c, size_t len)
 {
+    char *a = (char*)b;
+    int i;
+    i = 0;
+    while (i < len)
+    {
+        a[i] = c;
+        i++;
+    }
+    return (a);
+}
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main () {
+//    char str[] = "This is string.h library function";
+//    char *ret;
+//    ret = ft_memset(str+5,'$',7);
+//    printf("%s \n", ret);
+//    return(0);
+// }

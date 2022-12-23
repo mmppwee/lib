@@ -24,17 +24,17 @@ char	*ft_strchr(const char *s, int c)
 
 
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = 'a';
-   char *ret;
+// int main () {
+//    const char str[] = "http://www.tutorialspoint.com";
+//    const char ch = 'a';
+//    char *ret;
 
-   ret = ft_strchr(str, ch);
+//    ret = ft_strchr(str, ch);
 
-   printf("|%s|\n", ret);
+//    printf("|%s|\n", ret);
    
-   return(0);
-}	
+//    return(0);
+// }	

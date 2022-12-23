@@ -12,6 +12,24 @@
 
 FLAGS = -Wall -Werror -Wextra
 NAME = libft.a
-
-all:
-	gcc $(FLAGS) -c ft_isalpha.c -o ft_isalpha.o
+SRCS = ft_isalpha.c\
+ft_isdigit.c\
+ft_isalnum.c\
+ft_isascii.c\
+ft_isprint.c\
+ft_strlen.c\
+ft_strlcpy.c\
+ft_toupper.c\
+ft_tolower.c
+OBJS = $(SRCS:.c=.o)
+all: $(NAME)
+%o: %c
+	gcc $(FLAGS) -c $< -o $@
+$(NAME): $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
+clean:
+	rm -f $(OBJS)
+fclean: clean
+	rm -rf $(NAME)
+re: fclean all
+.PHONY: clean fclean all re
