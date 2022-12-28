@@ -15,7 +15,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
     char *a = (char*)b;
-    int i;
+    size_t i;
     i = 0;
     while (i < len)
     {
@@ -33,5 +33,5 @@ void	*ft_memset(void *b, int c, size_t len)
 //    char *ret;
 //    ret = ft_memset(str+5,'$',7);
 //    printf("%s \n", ret);
-//    return(0);
+//    ret(0);
 // }
