@@ -2,12 +2,38 @@
 
 char *ft_substr(const char *s, unsigned int start, size_t len)
 {
-    size_t i;
-    while (s[i] && s[i] != (char)start)
-        i++;
-    if (s[i] == (char)start)
+    unsigned int i;
+    unsigned int j;
+    unsigned int n;
+    i = start;
+    j = 0;
+    n = 0;
+    char *sub;
+    while (i < len + start && i < ft_strlen(s))
     {
-        while (i < len)
-            i++;
+        i++;
+        n++;
     }
+    sub = (char *)malloc(n+1);
+    if (sub == NULL)
+        return (NULL);
+    i = 0;
+    while (s[i] && i != start)
+        i++;
+    while (i >= start && j < n)
+    {
+        sub[j] = s[i];
+        i++;
+        j++;
+    }
+    sub[j] = '\0';
+    return (sub);
 }
+
+// #include <stdio.h>
+// int main (void)
+// {
+//     char *a;
+//     a = ft_substr("abcde", 2, 3);
+//     printf ("%s\n", a);
+// }
