@@ -10,31 +10,47 @@ c => [32]
 */
 int ft_wordcount(char *s, char c)
 {
-    char *a;
     int i;
     int n;
-    a = s;
     i = 0;
     n = 0;
-    while (a[i] != '\0')
+    while (s[i] != '\0')
     {
-        while (a[i] == c && a[i] != '\0')
+        while (s[i] == c && s[i] != '\0')
             i++;
-        while (a[i] != c && a[i] != '\0')
+        if (s[i] != '\0')
+            n++;
+        while (s[i] != c && s[i] != '\0')
             i++;
-        n++;
     }
     return (n);
 }
+// #include <stdio.h>
+// int main(void)
+// {
+//     int i;
+//     i = ft_wordcount(" Hello world aaa ", 'k');
+//     printf ("%d\n", i);
+// }
+
+
+
+char **ft_split(char const *s, char c)
+{
+    static char *a;
+    int i;
+    int start;
+    int end;
+    a = (char *)malloc ((ft_wordcount((char *)s, c) + 1) * sizeof(char *));
+    if (a == NULL)
+        return (NULL);
+    i = 0;
+
+}
+
 #include <stdio.h>
 int main(void)
 {
-    int i;
-    i = ft_wordcount(" Hello world aaa ",' ');
-    printf ("%d\n", i);
+    char s[] = "  Hello world aaa ";
+    printf("%c", **ft_split(s, ' '));
 }
-
-// char **ft_split(char const *s, char c)
-// {
-    
-// }
