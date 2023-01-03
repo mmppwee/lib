@@ -25,6 +25,7 @@ int ft_wordcount(char *s, char c)
     }
     return (n);
 }
+
 // #include <stdio.h>
 // int main(void)
 // {
@@ -33,24 +34,59 @@ int ft_wordcount(char *s, char c)
 //     printf ("%d\n", i);
 // }
 
-
+char *ft_word(char *s, int start, int end)
+{
+    int i;
+    int j;
+    char *a;
+    a = (char *)malloc ((end-start) * sizeof(char));
+    if (a == NULL)
+        return (NULL);
+    i = start;
+    j = 0;
+    while (i <= end)
+    {
+        a[j] = s[i];
+        i++;
+        j++;
+    }
+    a[j] = '\0';
+    return (a);    
+}
+//  int main(void)
+//  {
+//     printf("%s", ft_word("Hello aaa", 1, 4));
+//  }
 
 char **ft_split(char const *s, char c)
 {
-    static char *a;
+    char **res;
     int i;
     int start;
     int end;
-    a = (char *)malloc ((ft_wordcount((char *)s, c) + 1) * sizeof(char *));
-    if (a == NULL)
+    res = malloc ((ft_wordcount((char *)s, c) + 1) * sizeof(char *));
+    if (res == NULL)
         return (NULL);
     i = 0;
-
+    start = 0;
+    end = 0;
+    while (i <= ft_wordcount((char *)s, c))
+    {
+        while (s[start] == c)
+            start++;
+        end = start;
+        while (s[end] != c && s[end] != '\0')
+            end++;
+        res[i] = ft_word((char *)s, start, end);
+        start = end;
+        i++;
+    }
+    res[i] = NULL;
+    return(res);
 }
 
-// #include <stdio.h>
-// int main(void)
-// {
-//     char s[] = "  Hello world aaa ";
-//     printf("%c", **ft_split(s, ' '));
-// }
+#include <stdio.h>
+int main(void)
+{
+    printf("%s\n", *ft_split(" Hello aaa ", ' '));
+}
