@@ -48,9 +48,9 @@ char **ft_split(char const *s, char c)
 
 }
 
-#include <stdio.h>
-int main(void)
-{
-    char s[] = "  Hello world aaa ";
-    printf("%c", **ft_split(s, ' '));
-}
+// #include <stdio.h>
+// int main(void)
+// {
+//     char s[] = "  Hello world aaa ";
+//     printf("%c", **ft_split(s, ' '));
+// }
