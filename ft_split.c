@@ -39,12 +39,12 @@ char *ft_word(char *s, int start, int end)
     int i;
     int j;
     char *a;
-    a = (char *)malloc ((end-start) * sizeof(char));
+    a = (char *)malloc ((end-start + 1) * sizeof(char));
     if (a == NULL)
         return (NULL);
     i = start;
     j = 0;
-    while (i <= end)
+    while (i < end)
     {
         a[j] = s[i];
         i++;
@@ -58,6 +58,18 @@ char *ft_word(char *s, int start, int end)
 //     printf("%s", ft_word("Hello aaa", 1, 4));
 //  }
 
+void ft_free(char **str)
+{
+    int i;
+    i = 0;
+    while (str[i] != 0)
+    {
+        free(str[i]);
+        i++;
+    }
+    free(str);
+}
+
 char **ft_split(char const *s, char c)
 {
     char **res;
@@ -70,7 +82,7 @@ char **ft_split(char const *s, char c)
     i = 0;
     start = 0;
     end = 0;
-    while (i <= ft_wordcount((char *)s, c))
+    while (i < ft_wordcount((char *)s, c))
     {
         while (s[start] == c)
             start++;
@@ -83,10 +95,11 @@ char **ft_split(char const *s, char c)
     }
     res[i] = NULL;
     return(res);
+    ft_free(res);
 }
 
-#include <stdio.h>
-int main(void)
-{
-    printf("%s\n", *ft_split(" Hello aaa ", ' '));
-}
+// #include <stdio.h>
+// int main(void)
+// {
+//     printf("%s\n", *ft_split(" Hello aaa ", ' '));
+// }

@@ -1,5 +1,4 @@
 #include "libft.h"
-#include "ft_strlen.c"
 
 char    *ft_strrchr(const char *s, int c)
 {
